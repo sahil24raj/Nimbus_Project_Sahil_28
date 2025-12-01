@@ -8,7 +8,7 @@
 #define MAX_TITLE 100
 #define MAX_TAG 50
 
-// =================== Student 4: Dynamic Array & Memory ===================
+// =================== Dynamic Array & Memory ===================
 
 typedef struct {
     int year, month, day;
@@ -65,7 +65,7 @@ void addTaskToList(TaskList *list, Task t) {
     list->items[list->size++] = t;
 }
 
-// =================== Student 5: Date Parsing & Searching & Editing ===================
+// ===================  Date Parsing & Searching & Editing ===================
 
 Date parseDate(const char *s) {
     Date d;
@@ -122,7 +122,7 @@ void editTask(TaskList *list) {
     printf("Task updated successfully.\n");
 }
 
-// =================== Student 1: Add Task with Assignment ===================
+// ===================  Add Task with Assignment ===================
 
 int nextTaskId = 1;
 
@@ -169,7 +169,7 @@ void addTask(TaskList *list, User users[], int userCount) {
     printf("Task added with ID %d\n", t.id);
 }
 
-// =================== Student 2: Listing, Sorting, Filtering ===================
+// =================== Listing, Sorting, Filtering ===================
 
 void printTask(Task t, User users[], int userCount) {
     char assigneeName[MAX_NAME] = "Unknown";
@@ -251,7 +251,7 @@ void filterByTag(TaskList *list, User users[], int userCount) {
     if (!found) printf("No tasks with this tag.\n");
 }
 
-// =================== Student 3: Mark Complete & Productivity Report ===================
+// =================== Mark Complete & Productivity Report ===================
 
 void markTaskComplete(TaskList *list) {
     int id;
@@ -288,7 +288,7 @@ void productivityReport(TaskList *list, User users[], int userCount) {
     }
 }
 
-// =================== Student 6: Dependencies + Recurring + Main Menu ===================
+// =================== Dependencies + Recurring + Main Menu ===================
 
 void setDependency(TaskList *list) {
     int childId, parentId;
@@ -331,7 +331,7 @@ void setRecurring(TaskList *list) {
     printf("Task %d marked as recurring.\n", id);
 }
 
-// =================== Extra: User Management ===================
+// =================== User Management ===================
 
 int nextUserId = 1;
 
@@ -356,7 +356,7 @@ void listUsers(User users[], int userCount) {
     }
 }
 
-// =================== MAIN (Student 6) ===================
+// =================== MAIN  ===================
 
 int main() {
     TaskList tasks;
@@ -409,3 +409,4 @@ int main() {
     free(tasks.items);
     return 0;
 }
+
